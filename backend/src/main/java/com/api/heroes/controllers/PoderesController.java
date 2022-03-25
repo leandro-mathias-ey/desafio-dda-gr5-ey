@@ -30,7 +30,7 @@ public class PoderesController {
 	
 		
 	@GetMapping("/heroes/poderes")
-	public ResponseEntity<Page<PoderesModel>> getAllPoderes(@PageableDefault(page = 0, size = 10, sort = "poderId", direction = Sort.Direction.ASC) Pageable pageable){
+	public ResponseEntity<Page<PoderesModel>> getAllPoderes(@PageableDefault(page = 0, size = 1500, sort = "poderId", direction = Sort.Direction.ASC) Pageable pageable){
 		return ResponseEntity.status(HttpStatus.OK).body(poderesService.findAll(pageable));
 	}
 	

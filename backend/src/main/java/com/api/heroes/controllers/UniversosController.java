@@ -29,7 +29,7 @@ public class UniversosController {
 	
 		
 	@GetMapping("/heroes/universos")
-	public ResponseEntity<Page<UniversosModel>> getAllUniversos(@PageableDefault(page = 0, size = 10, sort = "universoId", direction = Sort.Direction.ASC) Pageable pageable){
+	public ResponseEntity<Page<UniversosModel>> getAllUniversos(@PageableDefault(page = 0, size = 1500, sort = "universoId", direction = Sort.Direction.ASC) Pageable pageable){
 		return ResponseEntity.status(HttpStatus.OK).body(universosService.findAll(pageable));
 	}
 	
