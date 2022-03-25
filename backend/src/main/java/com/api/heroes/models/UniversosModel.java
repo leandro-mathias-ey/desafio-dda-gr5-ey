@@ -23,8 +23,7 @@ import org.hibernate.annotations.Where;
 
 public class UniversosModel implements Serializable {
 	private static final long serialVersionUID = 1l;
-
-	@Column
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID universoId;
@@ -33,7 +32,7 @@ public class UniversosModel implements Serializable {
 	@Column(nullable = false)
 	private LocalDateTime createdAt;
 	
-	
+
 	
 	public UUID getUniversoId() {
 		return universoId;

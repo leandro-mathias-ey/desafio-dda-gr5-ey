@@ -11,6 +11,8 @@ public class HeroesDto {
 	private UUID universoId;
 	private UUID usuarioId;
 
+
+
 	public UUID getUsuarioId() {
 		return usuarioId;
 	}
