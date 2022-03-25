@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+  background-color: #21242d;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+}

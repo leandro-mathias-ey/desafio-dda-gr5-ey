@@ -1,0 +1,27 @@
+mappings
+
+-----LOGIN
+http://localhost:8080/login
+
+-----HEROES:
+
+POST: http://localhost:8080/heroes/create
+GET: http://localhost:8080/heroes
+GET ONE: http://localhost:8080/heroes/{heroiId}
+UPDATE: http://localhost:8080/update/{usuarioId}
+DELETE: http://localhost:8080/heroes/delete/{heroiId}
+
+-----USERS:
+
+POST: http://localhost:8080/user/create
+GET: http://localhost:8080/user
+GET ONE: http://localhost:8080/user/{usuarioId}
+UPDATE: http://localhost:8080/user/update/{usuarioId}
+DELETE: http://localhost:8080/user/delete/{usuarioId}
+
+-----PODERES
+GET: http://localhost:8080/heroes/poderes
+
+-----UNIVERSOS
+GET: http://localhost:8080/heroes/universos
+
