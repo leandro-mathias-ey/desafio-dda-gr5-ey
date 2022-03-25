@@ -16,12 +16,10 @@ const [universos, setUniversos] = useState([]);
 const [selectedUniverso, setSelectedUniverso] = useState('')
 const [selectedPoder, setSelectedPoder] = useState([])
 
-  useEffect(() => {
-    api.get('heroes/poderes').then(response => {
-      const getPoderes = response.data.content.map(resPoder => resPoder.poder);
-      setPoderes(getPoderes);
-    })
-  }, []);
+useEffect(async () => {
+  const { data } = await api.get('heroes/poderes');
+  setPoderes(data.content);    
+}, []);
 
   useEffect(async () => {
     const { data } = await api.get('heroes/universos');
@@ -82,7 +80,7 @@ const [selectedPoder, setSelectedPoder] = useState([])
                 onChange={handlerSelectPoder}
               >
                 <option value="">Selecione os poderes</option>
-                {poderes.map((item, i) => <option key={i} value={item}>{item}</option>)}
+                {poderes.map(item => <option key={item.poderId} value={item.poderId}>{item.poder}</option>)}
               </Form.Select>
             </Col>
           </Row>
