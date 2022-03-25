@@ -23,7 +23,8 @@ import org.hibernate.annotations.Where;
 
 public class UniversosModel implements Serializable {
 	private static final long serialVersionUID = 1l;
-	
+
+	@Column
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID universoId;

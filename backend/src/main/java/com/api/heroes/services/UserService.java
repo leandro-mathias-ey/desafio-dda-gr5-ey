@@ -7,12 +7,10 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.api.heroes.models.UserModel;
@@ -33,10 +31,6 @@ public class UserService {
 		this.userRepository = userRepository;
 		this.passwordEncoder = new BCryptPasswordEncoder();
 	}
-	
-	
-	
-	
 
 	@Transactional
 	public UserModel save(UserModel userModel) {
@@ -46,7 +40,7 @@ public class UserService {
 		return  userRepository.save(userModel);
 	}
 
-	
+
 	public boolean existsByEmail(String email) {
 		return userRepository.existsByEmail(email);
 	}

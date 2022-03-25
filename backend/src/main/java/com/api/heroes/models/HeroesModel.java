@@ -4,17 +4,9 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+import com.api.heroes.dtos.UserDto;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
@@ -37,13 +29,11 @@ public class HeroesModel implements Serializable {
 	@Column()
 	private Boolean deleted;
 	@Column()
-	private UUID universoId;
-	@Column()
 	private UUID usuarioId;
-	
-//	@OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "universoId", referencedColumnName = "universoId")
-//    private UniversosModel universoId;
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "universoId", insertable = true)
+	private UniversosModel universoId;
 	
 //	@OneToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "usuarioId", referencedColumnName = "usuarioId")
@@ -91,25 +81,19 @@ public class HeroesModel implements Serializable {
 		return serialVersionUID;
 	}
 
-	public UUID getUniversoId() {
+	public UUID getUsuarioId() {
+		return usuarioId;
+	}
+
+	public void setUsuarioId(UUID usuarioId) {
+		this.usuarioId = usuarioId;
+	}
+
+	public UniversosModel getUniversoId() {
 		return universoId;
 	}
 
-	public void setUniversoId(UUID universoId) {
+	public void setUniversoId(UniversosModel universoId) {
 		this.universoId = universoId;
 	}
-	
-	
-	
-
-	
-
-	
-	
-	
-
-	
-	
-	
-	
 }

@@ -10,8 +10,6 @@ public class HeroesDto {
 	private String nomeHeroi;
 	private UUID universoId;
 	private UUID usuarioId;
-	
-	
 
 	public UUID getUsuarioId() {
 		return usuarioId;
