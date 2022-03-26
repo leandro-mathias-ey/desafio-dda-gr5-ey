@@ -99,17 +99,11 @@ public class HeroesModel implements Serializable {
 		this.universoId = universoId;
 	}
 
+	public UUID getUsuarioId() {
+		return usuarioId;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
+	public void setUsuarioId(UUID usuarioId) {
+		this.usuarioId = usuarioId;
+	}
 }
