@@ -41,7 +41,9 @@ useEffect(async () => {
 
     const data = JSON.stringify({
       nomeHeroi: nome,
-      universoId: selectedUniverso,
+      universo: {
+        universoId: selectedUniverso
+      },
       usuarioId: "1a189a50-b77c-40d3-8200-61ed3cf91633"
     })
 

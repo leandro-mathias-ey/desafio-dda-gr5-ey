@@ -41,7 +41,7 @@ const Heroes = () => {
           <tr>
             <td>{item.nomeHeroi}</td>
             <td>hero_power</td>
-            <td>{item.universoId}</td>
+            <td>{item.universo.universo}</td>
             <td>{moment(item.createdAt).format('D MMMM YYYY')}</td>
             <td id="margin">
               <form onSubmit={handleSubmitUpdate}>
