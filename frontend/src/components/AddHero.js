@@ -42,7 +42,7 @@ useEffect(async () => {
     const data = JSON.stringify({
       nomeHeroi: nome,
       universoId: selectedUniverso,
-      usuarioId: "fc0e1dbc-227e-4ac2-9ebd-b8a515182fd6"
+      usuarioId: "1a189a50-b77c-40d3-8200-61ed3cf91633"
     })
 
     let createHeroi = await api.post('heroes/create', data, {

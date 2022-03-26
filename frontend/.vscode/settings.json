@@ -1,4 +1,4 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/1913940d-fc81-4b5a-b92d-7e745f41ddb3/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/frontend-desafio",
-    "appService.deploySubpath": "."
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/1913940d-fc81-4b5a-b92d-7e745f41ddb3/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/frontend-desafio-dda"
 }
