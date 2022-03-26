@@ -25,10 +25,6 @@ public class UniversosModel implements Serializable {
 	@Column(nullable = false)
 	private LocalDateTime createdAt;
 
-	@OneToMany()
-	private List<HeroesModel> herois;
-
-	
 	public UUID getUniversoId() {
 		return universoId;
 	}
@@ -51,11 +47,4 @@ public class UniversosModel implements Serializable {
 		return serialVersionUID;
 	}
 
-	public List<HeroesModel> getHerois() {
-		return herois;
-	}
-
-	public void setHerois(List<HeroesModel> herois) {
-		this.herois = herois;
-	}
 }
