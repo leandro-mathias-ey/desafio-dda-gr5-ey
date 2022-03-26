@@ -2,17 +2,10 @@ package com.api.heroes.models;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
@@ -31,7 +24,9 @@ public class UniversosModel implements Serializable {
 	private String universo;
 	@Column(nullable = false)
 	private LocalDateTime createdAt;
-	
+
+	@OneToMany()
+	private List<HeroesModel> herois;
 
 	
 	public UUID getUniversoId() {
@@ -55,9 +50,12 @@ public class UniversosModel implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-	
-	
 
-	
+	public List<HeroesModel> getHerois() {
+		return herois;
+	}
+
+	public void setHerois(List<HeroesModel> herois) {
+		this.herois = herois;
+	}
 }

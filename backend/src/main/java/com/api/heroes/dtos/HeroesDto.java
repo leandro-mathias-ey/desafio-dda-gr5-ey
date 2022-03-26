@@ -1,5 +1,7 @@
 package com.api.heroes.dtos;
 
+import com.api.heroes.models.UniversosModel;
+
 import java.util.UUID;
 
 import javax.validation.constraints.NotBlank;
@@ -8,7 +10,7 @@ public class HeroesDto {
 
 	@NotBlank
 	private String nomeHeroi;
-	private UUID universoId;
+	private UniversosModel universo;
 	private UUID usuarioId;
 
 
@@ -29,15 +31,11 @@ public class HeroesDto {
 		this.nomeHeroi = nomeHeroi;
 	}
 
-	public UUID getUniversoId() {
-		return universoId;
+	public UniversosModel getUniverso() {
+		return universo;
 	}
 
-	public void setUniversoId(UUID universoId) {
-		this.universoId = universoId;
+	public void setUniverso(UniversosModel universo) {
+		this.universo = universo;
 	}
-	
-	
-	
-	
 }
